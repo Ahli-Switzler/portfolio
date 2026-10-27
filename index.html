@@ -48,6 +48,26 @@
       font-size: 1.125rem;
       color: var(--muted);
     }
+    .tagline {
+      margin: 12px 0 0;
+      max-width: 40rem;
+    }
+    section + section { margin-top: 48px; }
+    .links {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links li + li { margin-top: 10px; }
+    .links a, .contact a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+    .links a:hover, .links a:focus-visible,
+    .contact a:hover, .contact a:focus-visible { text-decoration: underline; }
+    .contact { margin: 0; }
     h2 {
       margin: 0 0 16px;
       font-size: 0.875rem;
@@ -96,37 +116,53 @@
     <header>
       <h1>Ahli Switzler</h1>
       <p class="role">Content Producer, Nashville</p>
+      <p class="tagline">B2B podcast and video production, brand partnerships, and AI-assisted content workflows.</p>
     </header>
 
     <section aria-labelledby="work">
       <h2 id="work">Case Studies</h2>
       <div class="cards">
         <article class="card">
-          <h3>AI-Assisted Sponsorship Campaign for an Independent Publication</h3>
-          <p>A three-tool AI workflow that funded a print run nearly double the last one.</p>
+          <h3>Podcast Trailer Production, Future Media</h3>
+          <p>Creative direction and storylines for trailers across 50+ episodes of B2B podcasts in legal, healthcare, and professional services, built entirely from guests' own words.</p>
+          <a href="case-studies/Switzler_Case_Study_5_Podcast_Trailer_Format.pdf" target="_blank" rel="noopener">View case study (PDF)</a>
+        </article>
+        <article class="card">
+          <h3>AI-Assisted Sponsorship Campaign</h3>
+          <p>A Perplexity, Claude, and Figma AI workflow to fund a larger holiday print run for my zine, Drinking Buddies, with every AI-generated claim checked before it reached a sponsor. Scored 100/100 at Harvard Extension.</p>
           <a href="case-studies/Switzler_Case_Study_1_AI_Sponsorship_Campaign.pdf" target="_blank" rel="noopener">View case study (PDF)</a>
         </article>
         <article class="card">
-          <h3>Taste Is the Job: An AI-Drafted Essay, Verified Line by Line</h3>
-          <p>A research essay on where marketing is headed, drafted with AI and checked source by source.</p>
-          <a href="case-studies/Switzler_Case_Study_2_Taste_Is_the_Job.pdf" target="_blank" rel="noopener">View case study (PDF)</a>
-        </article>
-        <article class="card">
-          <h3>A Reusable Voice Check for AI Drafts</h3>
-          <p>A saved check that keeps AI drafts from reading as machine-written, then searches the text to prove it.</p>
+          <h3>AI Voice-Check System</h3>
+          <p>A Claude skill that keeps AI-drafted copy in my voice and then searches the finished text for every banned term, so nothing reads as machine-written.</p>
           <a href="case-studies/Switzler_Case_Study_3_AI_Voice_Check.pdf" target="_blank" rel="noopener">View case study (PDF)</a>
         </article>
         <article class="card">
-          <h3>A Four-Agent AI Pipeline for Music Press Outreach</h3>
-          <p>A Python pipeline that finds music press for an EP release and pitches it in a human voice.</p>
+          <h3>Multi-Agent Outreach Pipeline (personal music project)</h3>
+          <p>A four-agent Python pipeline I built with Claude Code for my own EP release. It finds music press, scores each outlet for fit, drafts the pitches, and rewrites them to sound human.</p>
           <a href="case-studies/Switzler_Case_Study_4_Multi_Agent_Pipeline.pdf" target="_blank" rel="noopener">View case study (PDF)</a>
         </article>
         <article class="card">
-          <h3>A Verbatim-Quote Trailer Format for Podcast Marketing</h3>
-          <p>One-minute podcast trailers built only from guest quotes, across more than 50 episodes.</p>
-          <a href="case-studies/Switzler_Case_Study_5_Podcast_Trailer_Format.pdf" target="_blank" rel="noopener">View case study (PDF)</a>
+          <h3>Taste Is the Job</h3>
+          <p>A research essay on where marketing is headed, drafted with Claude and checked source by source until every claim held up. Scored 100/100 at Harvard Extension.</p>
+          <a href="case-studies/Switzler_Case_Study_2_Taste_Is_the_Job.pdf" target="_blank" rel="noopener">View case study (PDF)</a>
         </article>
       </div>
+    </section>
+
+    <section aria-labelledby="more">
+      <h2 id="more">More Work</h2>
+      <ul class="links">
+        <li><a href="https://youtube.com/playlist?list=PLE9KLhDFcHgs" target="_blank" rel="noopener">Podcast clips playlist</a></li>
+        <li><a href="https://youtu.be/Y3TwyCKR9Wk" target="_blank" rel="noopener">Full episode sample</a></li>
+        <li><a href="https://ahli-switzler.github.io/DrinkingBuddiesWebsite/" target="_blank" rel="noopener">Drinking Buddies (site I designed and built)</a></li>
+        <li><a href="https://www.linkedin.com/in/ahli-switzler-9701b1184/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="contact">
+      <h2 id="contact">Contact</h2>
+      <p class="contact"><a href="mailto:ahliswitzler@gmail.com">ahliswitzler@gmail.com</a></p>
     </section>
 
     <footer>&copy; 2026 Ahli Switzler</footer>
