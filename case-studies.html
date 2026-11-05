@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ahli Switzler | Content Producer, Nashville</title>
+  <meta name="description" content="Portfolio and case studies from Ahli Switzler, Content Producer based in Nashville.">
+  <style>
+    :root {
+      --bg: #fafaf8;
+      --text: #1c1c1c;
+      --muted: #5c5c5c;
+      --card: #ffffff;
+      --border: #e4e4e0;
+      --accent: #1f4e79;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141414;
+        --text: #ececec;
+        --muted: #a8a8a8;
+        --card: #1e1e1e;
+        --border: #2e2e2e;
+        --accent: #8ab8e6;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 64px 16px;
+    }
+    header { margin-bottom: 40px; }
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 6vw, 2.75rem);
+      line-height: 1.15;
+    }
+    .role {
+      margin: 8px 0 0;
+      font-size: 1.125rem;
+      color: var(--muted);
+    }
+    .tagline {
+      margin: 12px 0 0;
+      max-width: 40rem;
+    }
+    section + section { margin-top: 48px; }
+    .links {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .links li + li { margin-top: 10px; }
+    .links a, .contact a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+    .links a:hover, .links a:focus-visible,
+    .contact a:hover, .contact a:focus-visible { text-decoration: underline; }
+    .contact { margin: 0; }
+    h2 {
+      margin: 0 0 16px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.125rem;
+    }
+    .card p {
+      margin: 0 0 20px;
+      color: var(--muted);
+      flex-grow: 1;
+    }
+    .card a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .card a:hover, .card a:focus-visible { text-decoration: underline; }
+    footer {
+      margin-top: 56px;
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Ahli Switzler</h1>
+      <p class="role">Content Producer, Nashville</p>
+      <p class="tagline">B2B podcast and video production, brand partnerships, and AI-assisted content workflows.</p>
+    </header>
+
+    <section aria-labelledby="work">
+      <h2 id="work">Case Studies</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Podcast Trailer Production, Future Media</h3>
+          <p>Creative direction and storylines for trailers across 50+ episodes of B2B podcasts in legal, healthcare, and professional services, built entirely from guests' own words.</p>
+          <a href="case-studies/Switzler_Case_Study_5_Podcast_Trailer_Format.pdf" target="_blank" rel="noopener">View case study (PDF)</a>
+        </article>
+        <article class="card">
+          <h3>Writing Sample: Podcast Publishing Copy</h3>
+          <p>Show notes, a guest LinkedIn post, and social clip captions written for a B2B legal podcast episode. Names and identifying details removed for confidentiality.</p>
+          <a href="case-studies/Podcast_Publishing_Copy_Sample_Ahli_Switzler.pdf" target="_blank" rel="noopener">View writing sample (PDF)</a>
+        </article>
+        <article class="card">
+          <h3>AI-Assisted Sponsorship Campaign</h3>
+          <p>A Perplexity, Claude, and Figma AI workflow to fund a larger holiday print run for my zine, Drinking Buddies, with every AI-generated claim checked before it reached a sponsor. Scored 100/100 at Harvard Extension.</p>
+          <a href="case-studies/Switzler_Case_Study_1_AI_Sponsorship_Campaign.pdf" target="_blank" rel="noopener">View case study (PDF)</a>
+        </article>
+        <article class="card">
+          <h3>AI Voice-Check System</h3>
+          <p>A Claude skill that keeps AI-drafted copy in my voice and then searches the finished text for every banned term, so nothing reads as machine-written.</p>
+          <a href="case-studies/Switzler_Case_Study_3_AI_Voice_Check.pdf" target="_blank" rel="noopener">View case study (PDF)</a>
+        </article>
+        <article class="card">
+          <h3>Multi-Agent Outreach Pipeline (personal music project)</h3>
+          <p>A four-agent Python pipeline I built with Claude Code for my own EP release. It finds music press, scores each outlet for fit, drafts the pitches, and rewrites them to sound human.</p>
+          <a href="case-studies/Switzler_Case_Study_4_Multi_Agent_Pipeline.pdf" target="_blank" rel="noopener">View case study (PDF)</a>
+        </article>
+        <article class="card">
+          <h3>Taste Is the Job</h3>
+          <p>A research essay on where marketing is headed, drafted with Claude and checked source by source until every claim held up. Scored 100/100 at Harvard Extension.</p>
+          <a href="case-studies/Switzler_Case_Study_2_Taste_Is_the_Job.pdf" target="_blank" rel="noopener">View case study (PDF)</a>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="more">
+      <h2 id="more">More Work</h2>
+      <ul class="links">
+        <li><a href="https://youtube.com/playlist?list=PLE9KLhDFcHgs" target="_blank" rel="noopener">Podcast clips playlist</a></li>
+        <li><a href="https://youtu.be/Y3TwyCKR9Wk" target="_blank" rel="noopener">Full episode sample</a></li>
+        <li><a href="https://ahli-switzler.github.io/DrinkingBuddiesWebsite/" target="_blank" rel="noopener">Drinking Buddies (site I designed and built)</a></li>
+        <li><a href="https://www.linkedin.com/in/ahli-switzler-9701b1184/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="contact">
+      <h2 id="contact">Contact</h2>
+      <p class="contact"><a href="mailto:ahliswitzler@gmail.com">ahliswitzler@gmail.com</a></p>
+    </section>
+
+    <footer>&copy; 2026 Ahli Switzler</footer>
+  </main>
+</body>
+</html>

@@ -1,176 +1,380 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ahli Switzler | Content Producer, Nashville</title>
-  <meta name="description" content="Portfolio and case studies from Ahli Switzler, Content Producer based in Nashville.">
-  <style>
-    :root {
-      --bg: #fafaf8;
-      --text: #1c1c1c;
-      --muted: #5c5c5c;
-      --card: #ffffff;
-      --border: #e4e4e0;
-      --accent: #1f4e79;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #141414;
-        --text: #ececec;
-        --muted: #a8a8a8;
-        --card: #1e1e1e;
-        --border: #2e2e2e;
-        --accent: #8ab8e6;
-      }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.5;
-    }
-    main {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 64px 16px;
-    }
-    header { margin-bottom: 40px; }
-    h1 {
-      margin: 0;
-      font-size: clamp(2rem, 6vw, 2.75rem);
-      line-height: 1.15;
-    }
-    .role {
-      margin: 8px 0 0;
-      font-size: 1.125rem;
-      color: var(--muted);
-    }
-    .tagline {
-      margin: 12px 0 0;
-      max-width: 40rem;
-    }
-    section + section { margin-top: 48px; }
-    .links {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-    .links li + li { margin-top: 10px; }
-    .links a, .contact a {
-      color: var(--accent);
-      font-weight: 600;
-      text-decoration: none;
-      overflow-wrap: anywhere;
-    }
-    .links a:hover, .links a:focus-visible,
-    .contact a:hover, .contact a:focus-visible { text-decoration: underline; }
-    .contact { margin: 0; }
-    h2 {
-      margin: 0 0 16px;
-      font-size: 0.875rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-    }
-    .card {
-      display: flex;
-      flex-direction: column;
-      padding: 24px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-    }
-    .card h3 {
-      margin: 0 0 8px;
-      font-size: 1.125rem;
-    }
-    .card p {
-      margin: 0 0 20px;
-      color: var(--muted);
-      flex-grow: 1;
-    }
-    .card a {
-      color: var(--accent);
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .card a:hover, .card a:focus-visible { text-decoration: underline; }
-    footer {
-      margin-top: 56px;
-      font-size: 0.875rem;
-      color: var(--muted);
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ahli Switzler, Podcast Producer and Content Marketer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F2F4F3; --ink:#18212B; --muted:#56616E; --line:#CDD3D8; --accent:#2D4FD6; --tint:#E4E8F5; --card:#FFFFFF;
+  color-scheme: light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#131820; --ink:#E8ECF1; --muted:#9AA5B2; --line:#2C3542; --accent:#8EA6FF; --tint:#1D2638; --card:#18202B;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#131820; --ink:#E8ECF1; --muted:#9AA5B2; --line:#2C3542; --accent:#8EA6FF; --tint:#1D2638; --card:#18202B;
+  color-scheme: dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Archivo",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;font-size:17px;line-height:1.55;font-variation-settings:"wdth" 100}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header.hero{padding:72px 0 40px}
+.name{font-size:clamp(46px,9vw,104px);line-height:.92;font-weight:800;font-variation-settings:"wdth" 125;letter-spacing:-.01em;margin:0}
+.role{font-size:clamp(19px,2.4vw,24px);font-weight:500;margin:18px 0 0;font-variation-settings:"wdth" 110}
+.lede{max-width:62ch;color:var(--muted);margin:18px 0 0}
+.contact{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:26px;font-weight:600}
+.lanes{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink);margin-top:48px}
+.lanes div{padding:14px 16px 0 0;font-size:15px;color:var(--muted)}
+.lanes b{display:block;color:var(--ink);font-size:16px;font-variation-settings:"wdth" 112}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(28px,4vw,40px);font-weight:750;font-variation-settings:"wdth" 118;line-height:1.05;margin:0 0 10px}
+.intro{color:var(--muted);max-width:64ch;margin:0 0 30px}
+.show{display:grid;grid-template-columns:280px 1fr;gap:28px;padding:28px 0;border-top:1px solid var(--line)}
+.show:first-of-type{border-top:0;padding-top:4px}
+.show h3{font-size:24px;font-weight:700;font-variation-settings:"wdth" 112;margin:0 0 6px;line-height:1.15}
+.show p{margin:0 0 10px;color:var(--muted);font-size:15.5px}
+.show .listen{font-weight:600;font-size:15px}
+.cuts h4{font-size:14px;font-weight:700;margin:0 0 8px;color:var(--muted);font-variation-settings:"wdth" 100}
+.cuts ul{list-style:none;margin:0 0 18px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.cuts li a,.cuts li span{display:inline-block;padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:var(--card);text-decoration:none;color:var(--ink);font-size:15px}
+.cuts li a:hover{border-color:var(--accent);color:var(--accent)}
+.cuts li span{color:var(--muted)}
+.did{font-size:15px;color:var(--muted)}
+.did b{color:var(--ink)}
+.note{background:var(--tint);padding:16px 18px;border-radius:6px;font-size:15px;max-width:72ch;margin-top:24px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.item h3{font-size:21px;font-weight:700;margin:0 0 6px;font-variation-settings:"wdth" 108}
+.item p{margin:0 0 8px;color:var(--muted);font-size:15.5px}
+.fig{font-size:clamp(34px,5vw,52px);font-weight:800;font-variation-settings:"wdth" 125;line-height:1;margin:0 0 6px;color:var(--ink)}
+.credits{display:flex;flex-wrap:wrap;gap:10px 28px;font-weight:600;font-size:18px;margin:6px 0 14px}
+.sample{margin-top:32px;border:1px solid var(--line);border-radius:6px;background:var(--card);padding:20px 22px;max-width:760px}
+.sample h3{font-size:21px;font-weight:700;font-variation-settings:"wdth" 108;margin:0 0 6px}
+.sample .meta{color:var(--muted);font-size:14.5px;margin:0 0 12px}
+.sample summary{cursor:pointer;font-weight:650;color:var(--accent)}
+.sample summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.sample .copy{margin-top:16px;font-size:15.5px}
+.sample .copy h4{font-size:15px;margin:20px 0 6px;color:var(--muted)}
+.sample .copy p{margin:0 0 10px}
+.sample .copy ul{margin:0 0 10px;padding-left:20px}
+.sample .copy .tags{color:var(--muted);font-size:14.5px}
+.event{display:grid;grid-template-columns:280px 1fr;gap:28px;padding:24px 0;border-top:1px solid var(--line)}
+.event:first-of-type{border-top:0;padding-top:4px}
+.event h3{font-size:22px;font-weight:700;font-variation-settings:"wdth" 112;margin:0 0 4px;line-height:1.15}
+.event .where{color:var(--muted);font-size:15px;margin:0}
+.event p{margin:0 0 8px;font-size:15.5px}
+.event .result{font-weight:650}
+.event .did{font-size:15px;color:var(--muted)}
+@media (max-width:760px){.event{grid-template-columns:1fr;gap:10px}}
+footer{padding:48px 0 64px;border-top:2px solid var(--ink)}
+footer p{margin:0 0 6px}
+@media (max-width:760px){
+  .show{grid-template-columns:1fr;gap:14px}
+  .pair{grid-template-columns:1fr;gap:28px}
+  .lanes{grid-template-columns:1fr 1fr;row-gap:14px}
+  header.hero{padding-top:48px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .name{animation:rise .7s ease-out both}
+  @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+}
+</style>
 </head>
 <body>
-  <main>
-    <header>
-      <h1>Ahli Switzler</h1>
-      <p class="role">Content Producer, Nashville</p>
-      <p class="tagline">B2B podcast and video production, brand partnerships, and AI-assisted content workflows.</p>
-    </header>
+<div class="wrap">
 
-    <section aria-labelledby="work">
-      <h2 id="work">Case Studies</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Podcast Trailer Production, Future Media</h3>
-          <p>Creative direction and storylines for trailers across 50+ episodes of B2B podcasts in legal, healthcare, and professional services, built entirely from guests' own words.</p>
-          <a href="case-studies/Switzler_Case_Study_5_Podcast_Trailer_Format.pdf" target="_blank" rel="noopener">View case study (PDF)</a>
-        </article>
-        <article class="card">
-          <h3>Writing Sample: Podcast Publishing Copy</h3>
-          <p>Show notes, a guest LinkedIn post, and social clip captions written for a B2B legal podcast episode. Names and identifying details removed for confidentiality.</p>
-          <a href="case-studies/Podcast_Publishing_Copy_Sample_Ahli_Switzler.pdf" target="_blank" rel="noopener">View writing sample (PDF)</a>
-        </article>
-        <article class="card">
-          <h3>AI-Assisted Sponsorship Campaign</h3>
-          <p>A Perplexity, Claude, and Figma AI workflow to fund a larger holiday print run for my zine, Drinking Buddies, with every AI-generated claim checked before it reached a sponsor. Scored 100/100 at Harvard Extension.</p>
-          <a href="case-studies/Switzler_Case_Study_1_AI_Sponsorship_Campaign.pdf" target="_blank" rel="noopener">View case study (PDF)</a>
-        </article>
-        <article class="card">
-          <h3>AI Voice-Check System</h3>
-          <p>A Claude skill that keeps AI-drafted copy in my voice and then searches the finished text for every banned term, so nothing reads as machine-written.</p>
-          <a href="case-studies/Switzler_Case_Study_3_AI_Voice_Check.pdf" target="_blank" rel="noopener">View case study (PDF)</a>
-        </article>
-        <article class="card">
-          <h3>Multi-Agent Outreach Pipeline (personal music project)</h3>
-          <p>A four-agent Python pipeline I built with Claude Code for my own EP release. It finds music press, scores each outlet for fit, drafts the pitches, and rewrites them to sound human.</p>
-          <a href="case-studies/Switzler_Case_Study_4_Multi_Agent_Pipeline.pdf" target="_blank" rel="noopener">View case study (PDF)</a>
-        </article>
-        <article class="card">
-          <h3>Taste Is the Job</h3>
-          <p>A research essay on where marketing is headed, drafted with Claude and checked source by source until every claim held up. Scored 100/100 at Harvard Extension.</p>
-          <a href="case-studies/Switzler_Case_Study_2_Taste_Is_the_Job.pdf" target="_blank" rel="noopener">View case study (PDF)</a>
-        </article>
-      </div>
-    </section>
+<header class="hero">
+  <h1 class="name">Ahli<br>Switzler</h1>
+  <p class="role">Podcast producer and content marketer in Nashville</p>
+  <p class="lede">I produce interview podcasts for B2B brands. I manage five client shows at a time, with 50+ episodes delivered so far, and each episode leaves my desk within a week as a finished edit, a trailer, social clips, and the copy that goes with them.</p>
+  <div class="contact">
+    <a href="mailto:ahliswitzler@gmail.com">ahliswitzler@gmail.com</a>
+    <a href="https://www.youtube.com/watch?v=BGz5op2A0H8&amp;list=PLE9KLhDFcHgs">Full playlist of my work</a>
+    <a href="https://www.youtube.com/watch?v=Y3TwyCKR9Wk">Full episode sample</a>
+  </div>
+  <div class="lanes">
+    <div><b>Multi-camera editing</b>Riverside, Descript, Premiere Pro, Logic Pro</div>
+    <div><b>Trailers and clips</b>A trailer, five social clips, and their captions per episode</div>
+    <div><b>Show design</b>Graphics and episode art, applied across every episode</div>
+    <div><b>AI workflows</b>Claude Skills and Python reporting</div>
+  </div>
+</header>
 
-    <section aria-labelledby="more">
-      <h2 id="more">More Work</h2>
-      <ul class="links">
-        <li><a href="https://youtube.com/playlist?list=PLE9KLhDFcHgs" target="_blank" rel="noopener">Podcast clips playlist</a></li>
-        <li><a href="https://youtu.be/Y3TwyCKR9Wk" target="_blank" rel="noopener">Full episode sample</a></li>
-        <li><a href="https://ahli-switzler.github.io/DrinkingBuddiesWebsite/" target="_blank" rel="noopener">Drinking Buddies (site I designed and built)</a></li>
-        <li><a href="https://www.linkedin.com/in/ahli-switzler-9701b1184/" target="_blank" rel="noopener">LinkedIn</a></li>
+<section id="podcasts">
+  <h2>Podcast work for Future Media</h2>
+  <p class="intro">Every episode I produce gets a multi-camera edit recorded through Riverside, a trailer, five social clips with captions written in the host’s voice, and show graphics that keep each series consistent. Clients publish this work on their own channels, as is standard for freelance editing. The cut, pacing, sound, and design are mine.</p>
+
+  <div class="show">
+    <div>
+      <h3>Culture Works</h3>
+      <p>Leadership and workplace culture, hosted by Chester Elton and Adrian Gostick, New York Times bestselling authors.</p>
+      <a class="listen" href="https://podcasts.apple.com/us/podcast/the-culture-works-podcast/id1841698981">Listen on Apple Podcasts</a><br>
+      <a class="listen" href="https://open.spotify.com/show/5fDW7spiSOXlDXw8yp7qlO">Listen on Spotify</a>
+    </div>
+    <div class="cuts">
+      <h4>Episodes I produced, with trailers</h4>
+      <ul>
+        <li><a href="https://www.linkedin.com/posts/chesterelton_cultureworks-hrleadership-chroinsights-activity-7450924749817274368-HuK1">Rosanne Donohue</a></li>
+        <li><a href="https://www.linkedin.com/posts/chesterelton_whats-the-real-cost-of-bad-hr-its-not-activity-7460770565486854144-5B51">Libbie Lamott</a></li>
+        <li><a href="https://www.linkedin.com/posts/chesterelton_whens-the-last-time-your-insurance-broker-activity-7465749077759049728-j_jM">Chris Mari</a></li>
+        <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7470891780587196416/">Nate Brock</a></li>
+        <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7445564337919856640/">Cory Rose</a></li>
+        <li><span>Jim Scarfone</span></li>
       </ul>
-    </section>
+      <p class="did"><b>My role:</b> multi-camera episode edits, trailers, social clips and captions, and show graphics.</p>
+    </div>
+  </div>
 
-    <section aria-labelledby="contact">
-      <h2 id="contact">Contact</h2>
-      <p class="contact"><a href="mailto:ahliswitzler@gmail.com">ahliswitzler@gmail.com</a></p>
-    </section>
+  <div class="show">
+    <div>
+      <h3>The Operating System</h3>
+      <p>Operational excellence in radiology, imaging, and healthcare technology, hosted by Andy Milkowski, CEO of Imorgon Medical.</p>
+      <a class="listen" href="https://open.spotify.com/show/033iThK57cwvzi3xroGuU0">Listen on Spotify</a>
+    </div>
+    <div class="cuts">
+      <h4>Full episode</h4>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=Y3TwyCKR9Wk">Jim McCarville</a></li>
+      </ul>
+      <h4>Trailers</h4>
+      <ul>
+        <li><a href="https://www.youtube.com/shorts/7-ksrVZTyws">Show trailer</a></li>
+        <li><a href="https://www.youtube.com/watch?v=SMpUlah_yt4">Show trailer on the show’s channel</a></li>
+        <li><a href="https://www.youtube.com/shorts/uZJ3M6KmBjk">Chris Baxley</a></li>
+        <li><a href="https://www.youtube.com/shorts/VLM492rmaCM">Dr. Lee Milligan</a></li>
+      </ul>
+      <h4>Clips</h4>
+      <ul>
+        <li><a href="https://www.linkedin.com/posts/andymilkowski_losing-50-of-your-imaging-business-a-remarkable-activity-7478153574334672896-2Vpk">Chris Baxley</a></li>
+        <li><a href="https://www.linkedin.com/posts/andymilkowski_running-a-code-at-2am-changes-ux-ehrs-hand-activity-7485410285923581952-Ovfl">Dr. Lee Milligan</a></li>
+      </ul>
+      <p class="did"><b>My role:</b> multi-camera episode edits, trailers, social clips and captions, and show graphics.</p>
+    </div>
+  </div>
 
-    <footer>&copy; 2026 Ahli Switzler</footer>
-  </main>
+  <div class="show">
+    <div>
+      <h3>The Legal Edge</h3>
+      <p>Marketing for law firms, hosted by Rob Rosasco.</p>
+      <a class="listen" href="https://open.spotify.com/show/185KRmrI2gIevKFBESZI5Q">Listen on Spotify</a>
+    </div>
+    <div class="cuts">
+      <h4>Full episodes</h4>
+      <ul>
+        <li><a href="https://podcasts.apple.com/us/podcast/the-best-kept-secret-on-ai-in-law-with-kimberly-russell/id1829043191?i=1000790375361">Kimberly Russell, AI in law</a></li>
+        <li><a href="https://www.youtube.com/watch?v=ffdmR_uA-Ak">Episode on YouTube</a></li>
+        <li><a href="https://www.youtube.com/watch?v=enRvnG9Rybo">Another episode on YouTube</a></li>
+      </ul>
+      <h4>Trailers</h4>
+      <ul>
+        <li><a href="https://www.youtube.com/shorts/w_kTqYWYNEs">Abby Chin</a></li>
+        <li><a href="https://www.youtube.com/shorts/PUosNBB3X8Q">Bob Burn</a></li>
+        <li><a href="https://youtube.com/shorts/n46asfM598I">David Craig</a></li>
+        <li><a href="https://youtube.com/shorts/E_aEixkynkQ">Mathew Moeller</a></li>
+        <li><a href="https://www.youtube.com/shorts/n66OxTy4lmA">Stolle Voigt</a></li>
+      </ul>
+      <p class="did"><b>My role:</b> multi-camera episode edits, trailers, social clips and captions, and show graphics.</p>
+    </div>
+  </div>
+
+  <div class="show">
+    <div>
+      <h3>Hot Gossip</h3>
+      <p>Hospitality and design storytelling, co-hosted by Hannah Collins Tate, founder of ROY Hospitality Design Group, and Jacob Cross.</p>
+      <a class="listen" href="https://open.spotify.com/show/5OOpFDSQXWb59hAO9QZE6n">Listen on Spotify</a>
+    </div>
+    <div class="cuts">
+      <h4>Trailers</h4>
+      <ul>
+        <li><a href="https://www.youtube.com/shorts/E8dr9g5RmDM">Justin Gurland, The Maze</a></li>
+        <li><a href="https://www.youtube.com/shorts/U_-zlHmFrQ4">Row 34</a></li>
+        <li><a href="https://www.youtube.com/shorts/V5TrGYQuwP4">Roya Shanks, The Odeon</a></li>
+      </ul>
+      <p class="did"><b>My role:</b> multi-camera episode edits, trailers, and show graphics.</p>
+    </div>
+  </div>
+
+  <p class="note">Behind the edits, I built Claude Skills that handle the repeatable parts of every episode. Publishing copy takes about two hours less, and finding clips and pulling trailer moments each take about 30 minutes less, which adds up to roughly three hours saved per episode. A separate lead generation workflow saves 10+ hours per client. Every draft still gets a manual review and a voice check that strips machine-sounding language before anything reaches a client.</p>
+
+  <div class="sample" id="writing-sample">
+    <h3>Writing sample: publishing copy for one episode</h3>
+    <p class="meta">Written for a B2B legal podcast. Client, guest, and firm names are replaced with placeholders to protect confidentiality.</p>
+    <details>
+      <summary>Read the full copy package</summary>
+      <div class="copy">
+        <h4>Episode title</h4>
+        <p><b>Decoding Red Flags in Law Firms w. [Guest Name]</b></p>
+        <h4>Description</h4>
+        <p>How a longtime personal injury attorney built a growing firm, and competes against national advertisers with nine-figure budgets, by becoming the most trusted name in truck accident law.</p>
+        <h4>Show notes</h4>
+        <p>When venture capital flooded the personal injury market and national firms started spending hundreds of millions of dollars a year on advertising, most small firm owners decided they couldn’t compete. [Guest Name] decided to do something different. As managing partner of [Law Firm], a mid-sized firm with offices across [Region], [Guest Name] has spent decades doing exactly one thing: truck accident and commercial vehicle cases. He’s board certified in truck accident law, he’s published a consumer guide to hiring the right attorney, and he hosts his own consumer-facing podcast. In this conversation, [Host Name] and [Guest Name] break down why the legal advertising market is unrecognizable from what it was 20 years ago, what the average consumer still doesn’t know when hiring an attorney, and how a firm committed to depth over volume keeps winning cases, and clients, against gorillas with unlimited budgets. If you’re a law firm owner trying to figure out how to compete without outspending the market, this episode is your blueprint.</p>
+        <h4>LinkedIn post, written in the guest’s voice</h4>
+        <p>I sat down with [Host Name] on [Show Name] to talk about what it takes to build a law firm when the market around you is being rewritten by venture capital and firms spending hundreds of millions on advertising.</p>
+        <p>I’ve been practicing truck accident law for decades. I’ve watched legal advertising go from courthouse-square dominance to Yellow Pages to TV to national VC-backed firms in my own backyard. Every step of the way, I’ve had to figure out how to keep winning without matching their budgets.</p>
+        <p>A few things from the conversation worth sharing:</p>
+        <ul>
+          <li>Advertising doesn’t make you good. Billboards, TV spots, and Google Ads can get you cases. They can’t make you qualified to handle them. Clients often can’t tell the difference until it’s too late.</li>
+          <li>The question almost no one asks: Are you board certified in the area of law I need? That one question eliminates most of the field.</li>
+          <li>Content isn’t marketing. A client showed up to her intake for a wrongful death case having read my book the night before. She asked me questions straight from it. We won the case. That’s what putting out useful information over time actually does.</li>
+          <li>It’s never been easier to be the right attorney. The same technology making it easy to hire the wrong lawyer also makes it easier than ever to learn, specialize, and build real expertise. There’s no excuse not to be excellent.</li>
+          <li>Build something that survives you. Every attorney at my firm started as a law clerk. Most have been here for decades. I invest in them because I want a firm that outlasts me.</li>
+        </ul>
+        <p>Full episode: [link]</p>
+        <p>If you want a copy of the book, reach out. Happy to send one.</p>
+        <p class="tags">#TruckAccidentLaw #LawFirmGrowth #LegalMarketing #PersonalInjuryLaw #LawFirmLeadership</p>
+        <h4>Social clip captions</h4>
+        <p>“I know who the good divorce lawyers are. Who the good criminal lawyers are. The average person hiring one has no idea. That’s the problem I’ve spent [my career] trying to solve.”</p>
+        <p class="tags">#LegalMarketing #HireTheRightAttorney #TruckAccidentLaw #LawFirmGrowth</p>
+        <p>“I put in the hours to become a decent trial lawyer. Marketing is no different. It takes the same time and effort. Most lawyers just never make that investment.”</p>
+        <p class="tags">#LegalMarketing #LawFirmGrowth #TruckAccidentLaw #PersonalInjuryLaw</p>
+        <p>“Marketing isn’t the problem. Confusing visibility with quality is. A urinal ad doesn’t make you good or bad. So what does? That’s the question worth asking.”</p>
+        <p class="tags">#LegalMarketing #HireTheRightAttorney #LawFirmGrowth #TruckAccidentLaw</p>
+        <p>“A sore neck that heals in five days, most PI lawyers can handle that. A wrongful death with young kids involved, that’s a different situation. The bigger the matter, the more the right attorney matters.”</p>
+        <p class="tags">#HireTheRightAttorney #TruckAccidentLaw #PersonalInjuryLaw #LawFirmGrowth</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section id="independent">
+  <h2>Independent clients</h2>
+  <p class="intro">Freelance video work outside Future Media.</p>
+  <div class="show">
+    <div>
+      <h3>Andy Kilworth</h3>
+      <p>Short-form video for an ultramarathon runner.</p>
+    </div>
+    <div class="cuts">
+      <h4>Shorts</h4>
+      <ul>
+        <li><a href="https://www.youtube.com/shorts/OOpXhSoLGds">Short one</a></li>
+        <li><a href="https://www.youtube.com/shorts/9Z3yKRtIIHk">Short two</a></li>
+      </ul>
+      <p class="did"><b>My role:</b> edited from raw footage, cut in all the B-roll, and sourced the on-screen infographics.</p>
+    </div>
+  </div>
+</section>
+
+<section id="campaigns">
+  <h2>Social campaigns</h2>
+  <p class="intro">Content I conceived, shot, and edited for my own music releases.</p>
+  <div class="pair">
+    <div class="item">
+      <p class="fig">720,000+</p>
+      <h3>Plays on one Instagram reel</h3>
+      <p>A summer release built around personality instead of a polished promo. I tracked Insights as it grew and shaped follow-up posts around what was working.</p>
+      <a href="https://www.instagram.com/reel/CrEKSU7tis6/">Watch the reel</a>
+    </div>
+    <div class="item">
+      <p class="fig">1,000,000+</p>
+      <h3>Streams on my debut EP</h3>
+      <p>The social campaign I ran pushed the EP past a million streams and got it trending on Sony’s platforms.</p>
+    </div>
+  </div>
+</section>
+
+<section id="publishing">
+  <h2>Writing, design, and events</h2>
+  <div class="pair">
+    <div class="item">
+      <h3>Drinking Buddies</h3>
+      <p>A quarterly illustrated zine I founded, profiling Nashville bartenders. I interview, write, illustrate, and lay out every issue. It grew from 10 handmade copies to 1,600+ across 15+ bars, with sponsors including Bacardi and Jack Daniel’s, plus events like the annual Bartender’s Auction for Big Table.</p>
+      <a href="https://ahli-switzler.github.io/DrinkingBuddiesWebsite/">See the zine and events</a>
+    </div>
+    <div class="item">
+      <h3>Case studies and writing</h3>
+      <p>Marketing strategy and AI workflow case studies from my Harvard Extension coursework in Marketing Management and Digital Strategy, plus long-form marketing writing.</p>
+      <a href="https://ahli-switzler.github.io/portfolio/case-studies.html">Read the case studies</a>
+    </div>
+  </div>
+</section>
+
+<section id="events">
+  <h2>Events</h2>
+  <p class="intro">Events I conceived and produced through Drinking Buddies, from the format and sponsor pitch to the run of show, promotion, and recap.</p>
+
+  <div class="event">
+    <div>
+      <h3>Rumple in the Jungle</h3>
+      <p class="where">Love’s Alibi, September 2026. Built around a Rumple Minze draft launch.</p>
+    </div>
+    <div>
+      <p>A single elimination bartender tournament with UFC-style walkouts, a live mystery ingredient wheel, and crowd hype scored as part of every bout.</p>
+      <p class="result">100+ RSVPs, 11 bartenders, 10 bouts, and a room at capacity for three straight hours with no drop-off.</p>
+      <p class="did"><b>My role:</b> co-created the concept, designed the bracket and rules, wrote the run of show, coordinated competitors and venue, ran the night’s music and timing, and wrote the recap. <a href="https://www.instagram.com/p/DdrKYDsImfq/">See the post</a></p>
+    </div>
+  </div>
+
+  <div class="event">
+    <div>
+      <h3>The Great Summer Daiq Off</h3>
+      <p class="where">Lost &amp; Found, July 2026. Presented with Trovador Rum.</p>
+    </div>
+    <div>
+      <p>A citywide daiquiri competition between Nashville bars.</p>
+      <p class="result">175 guests, 14 bars competing, and 22,700 social reach on a very small budget.</p>
+      <p class="did"><b>My role:</b> created the concept, recruited all 14 bars and the judges, and served as point of contact for every bartender, including material pickup. Secured sponsored juice from Verde, represented Trovador as its brand ambassador, and handled all graphic design and social outreach. On the night, I ran the event on site and MC’d, then wrote the social recap. <a href="https://www.instagram.com/p/DafyikKoAWr/">See the post</a></p>
+    </div>
+  </div>
+
+  <div class="event">
+    <div>
+      <h3>Potions &amp; Paws</h3>
+      <p class="where">Lost &amp; Found, October 2026. Benefiting Pawster.</p>
+    </div>
+    <div>
+      <p>A Halloween cocktail night for a Nashville dog fostering nonprofit, with a costume contest where the dogs go first. Spirits brands build featured cocktails, and $2 from each one goes to Pawster, rung through the register as its own line so the total is verifiable. Year two moved to a bigger venue and a bigger build after a smaller first year at Pearl Diver in 2025.</p>
+      <p class="did"><b>My role:</b> concept, sponsor pitch, run of show, floor plan, print and digital assets, and MC. <a href="https://www.instagram.com/p/DfAdnGioWSl/">See the year two recap</a></p>
+    </div>
+  </div>
+
+  <div class="event">
+    <div>
+      <h3>Hot Takes Night</h3>
+      <p class="where">Back Bar at Verna, monthly since April 2026.</p>
+    </div>
+    <div>
+      <p>A live opinion showdown where people defend their worst takes in front of a crowd and a panel of judges. Sponsored by Bacardi, then Montucky Cold Snacks as Hot Takes &amp; Cold Snacks, with a themed cocktail menu I designed.</p>
+      <p class="result">Standing room only at the first round, and six monthly rounds with no paid promotion.</p>
+      <p class="did"><b>My role:</b> format, sponsor partnerships, menu and promo design, and MC.</p>
+    </div>
+  </div>
+
+  <div class="event">
+    <div>
+      <h3>House Party Series</h3>
+      <p class="where">Fly Pelican Fly, monthly.</p>
+    </div>
+    <div>
+      <p>Each month a different Nashville bartender takes full creative control of the bar for one night, from a Dungeons and Dragons pop-up to an art gallery of local service workers. I built a tiered sponsorship package with product placement and category exclusivity.</p>
+      <p class="did"><a href="https://www.instagram.com/p/DcgjGq5osT-/">Dungeons and Dragons pop-up</a>   <a href="https://www.instagram.com/p/DdKSOEhBqfs/">Art gallery pop-up</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="music">
+  <h2>Music</h2>
+  <p class="intro">Frost School of Music graduate, magna cum laude. Sync songwriter with Position Music since 2020.</p>
+  <div class="credits"><span>Perfect Match, Netflix</span><span>Hit Makers, Netflix</span><span>The Sex Lives of College Girls, HBO</span><span>Teen Mom franchise, MTV (9 placements)</span><span>Primate (2025)</span><span>The Living Tree</span></div>
+  <p class="intro">Two Best Score nominations at the Nashville Short Film Festival. Earlier, I interned in Studio G at Blackbird Studios under engineer Aaron Pierce, working in the mixing and mastering suite and building Pro Tools sessions for in-house producers.</p>
+</section>
+
+<footer>
+  <p><b>Ahli Switzler</b>, Nashville, TN</p>
+  <p><a href="mailto:ahliswitzler@gmail.com">ahliswitzler@gmail.com</a></p>
+</footer>
+
+</div>
 </body>
 </html>
